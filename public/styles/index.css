@@ -1,0 +1,212 @@
+*{
+    user-select: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+
+}
+
+.whole{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.infobody h1{
+    font-size: 30px;
+    font-style:italic;
+}
+
+.infobody p{
+    font-size: 22px;
+    color: rgb(40, 40, 40);
+}
+
+.infobody img{
+    width: 100px;
+    height: 100px;
+    border-radius:100%;
+    box-shadow: 1px 1px 8px 1px;
+    transition: 1s;
+}
+
+.infobody img:hover{
+    transform: rotate(360deg);
+}
+
+.about p{
+    font-size: 17px;
+    color:#4b4b4b ;
+}
+
+.eduone{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 7px;
+    padding: 5px;
+    
+    transition: 0.2s;
+    margin-top: 15px;
+}
+
+.eduone:hover{
+    box-shadow: 0.5px 0.5px 7px 2px;
+    cursor:default;
+    
+}
+
+.eduone img{
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+
+}
+
+.eduinfo h3{
+    margin-top: 0px;
+    margin-bottom:0;
+    font-size: 17px;
+}
+
+.eduinfo p{
+    margin-top:0px;
+    margin-bottom: 0px;
+    color: rgb(40, 40, 40);
+    font-size: 15px;
+}
+
+.eduone img{
+    border-radius: 7px;
+}
+
+.skills ul{
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+    flex-wrap: wrap;
+}
+
+.skills li{
+    margin: 5px;
+    font-size: 14px;
+    padding: 2px 5px;
+    color: white;
+    background-color: gray;
+    border-radius: 7px;
+    font-weight:600; 
+}
+
+#proj{
+    display: flex;
+    flex-direction: column;
+    
+}
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: max-content;
+}
+
+.aproject{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    text-align: center;
+    transition: 0.2s;
+    margin: 10px;
+    height:250px;
+    padding: 10px;
+    transform:perspective(1000px) rotatex(30deg);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.aproject img{
+    width:250px;
+    border:1px solid;
+    box-shadow: 0px 1px 10px 0px;
+    
+}
+.aproject p{
+    color: rgb(40, 40, 40);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.aproject:hover{
+    transform:scale(1.05);
+    box-shadow: 0.5px 0.5px 7px -1px black;
+    border: 1px solid;
+    
+}
+.whole{
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 200ms;
+}
+@keyframes fadein{
+    0%{opacity: 0;}
+    100%{opacity: 100;}
+}
+
+@media (max-width:650px){
+    .projects{
+        justify-content: center;
+    }
+    .aproject{
+        margin: 5px;
+        
+    }
+}
+
+
+#z{
+    position: sticky;
+    bottom: 10px
+}
+.bar{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 10px;
+    
+}
+#foot{
+    display: flex;
+    box-shadow: 0.5px 0.5px 3px 0.5px;
+    border-radius: 30px;
+    margin-top: 30px;
+    background-color: rgb(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    align-items: center;
+}
+.bar img{
+    height: 30px;
+    margin: 6px 10px 4px 10px;
+    transition: 0.2s;
+    border-radius: 100%;
+    box-shadow: 0.5px 0.5px 5px -1px black;
+    
+    font-style: none;
+}
+.bar img:hover{
+    transform:scale(1.2);
+    cursor: pointer;
+    margin-left: 15px;
+    margin-right: 15px;
+   
+}
