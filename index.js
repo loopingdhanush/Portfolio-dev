@@ -1,16 +1,19 @@
 import express from "express";
-import { createServer } from "http";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 
-app.use(express.static("public"));
+// Get the directory name (for ES module support)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Serve static files from the "public" folder
+app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-    res.sendFile("index.html", { root: "public" });
+    res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
+// Export the app (No `app.listen()` on Vercel)
 export default app;
-
-
-app.listen(5000, () => console.log("Server ready on port 5000."));
-
